@@ -1,0 +1,4 @@
+include ':app'
+/*
+include ':AndroidSearchSDK'
+project(":AndroidSearchSDK").projectDir = new File("/Users/qinyandong/work/source/AndroidSearchSDK")*/

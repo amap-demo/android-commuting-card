@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/drive_time_tiltle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="预计"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/drive_arrive_time"/>
+
+
+    <TextView
+        android:id="@+id/drive_arrive_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:text="12:00"
+        app:layout_constraintLeft_toRightOf="@+id/drive_time_tiltle1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+    android:id="@+id/drive_time_tiltle2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginTop="20dp"
+    android:textSize="15sp"
+    android:text="到达 约"
+    app:layout_constraintLeft_toRightOf="@+id/drive_arrive_time"
+        app:layout_constraintBottom_toBottomOf="@+id/drive_arrive_time" />
+
+    <TextView
+        android:id="@+id/drive_spend_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:text="32"
+        app:layout_constraintLeft_toRightOf="@+id/drive_time_tiltle2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/drive_time_tiltle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="分钟"
+        app:layout_constraintLeft_toRightOf="@+id/drive_spend_duration"
+        app:layout_constraintBottom_toBottomOf="@+id/drive_arrive_time"/>
+
+
+    <Button
+        android:id="@+id/drive_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:minWidth="60dp"
+        android:minHeight="40dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorWhite"
+        android:layout_weight="1"
+        android:background="@drawable/btn_shape"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="出发"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        android:text="路况变化较小，随时出发"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drive_time_tiltle1"/>
+
+</android.support.constraint.ConstraintLayout>

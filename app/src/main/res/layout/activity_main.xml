@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/title"
+        android:text="通勤卡片"
+        android:textSize="20dp"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+
+        <Button
+            android:id="@+id/change_query_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="60dp"
+            android:minHeight="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/colorBlack"
+            android:background="@drawable/btn_shape"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="切为公交"/>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/change_query_type"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/start_point"
+                android:text="起点"
+                android:textSize="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:id="@+id/choose_start_point"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:minWidth="60dp"
+                android:minHeight="20dp"
+                android:textSize="12dp"
+                android:textColor="@color/colorBlack"
+                android:background="#ff0000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="重选起点"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/end_point"
+
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="终点"
+                android:textSize="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_point"/>
+
+            <Button
+                android:id="@+id/choose_end_point"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:minHeight="20dp"
+                android:minWidth="60dp"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                android:background="#ff0000"
+                app:layout_constraintTop_toBottomOf="@+id/choose_start_point"
+                app:layout_constraintRight_toRightOf="parent"
+                android:text="重选终点"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <com.amap.demo.commutingcard.view.DriveView
+        android:id="@+id/drive_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <com.amap.demo.commutingcard.view.BusView
+        android:id="@+id/bus_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</android.support.constraint.ConstraintLayout>
